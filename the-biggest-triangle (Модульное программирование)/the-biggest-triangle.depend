@@ -1,0 +1,33 @@
+# depslib dependency file v1.0
+1664169548 source:c:\users\glaster\desktop\trig-task\the-biggest-triangle\file.cpp
+	<fstream>
+	<iostream>
+	<limits>
+	<string>
+	"geometry.h"
+	"file.h"
+
+1664167449 c:\users\glaster\desktop\trig-task\the-biggest-triangle\geometry.h
+
+1664167456 c:\users\glaster\desktop\trig-task\the-biggest-triangle\file.h
+
+1664164661 source:c:\users\glaster\desktop\trig-task\the-biggest-triangle\geometry.cpp
+	<math.h>
+	"geometry.h"
+
+1664162270 source:c:\users\glaster\desktop\trig-task\the-biggest-triangle\search.cpp
+	<iostream>
+	"geometry.h"
+	"file.h"
+	"search.h"
+
+1664162369 c:\users\glaster\desktop\trig-task\the-biggest-triangle\search.h
+
+1664167123 source:c:\users\glaster\desktop\trig-task\the-biggest-triangle\main.cpp
+	<iostream>
+	<cstring>
+	<sys/stat.h>
+	"geometry.h"
+	"file.h"
+	"search.h"
+
