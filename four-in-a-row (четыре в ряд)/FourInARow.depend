@@ -1,0 +1,12 @@
+# depslib dependency file v1.0
+1664804304 source:c:\users\glaster\desktop\four-in-a-row\fourinarow\main.cpp
+	<iostream>
+	"field.h"
+
+1664804257 c:\users\glaster\desktop\four-in-a-row\fourinarow\field.h
+
+1664806352 source:c:\users\glaster\desktop\four-in-a-row\fourinarow\field.cpp
+	"field.h"
+	<iostream>
+	<stdlib.h>
+
