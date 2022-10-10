@@ -1,7 +1,8 @@
-#include "field.h"
-#include "field_consts.h"
 #include <iostream>
 #include <stdlib.h>
+#include "field.h"
+#include "field_consts.h"
+
 using namespace std;
 
 void Clear_console(){
@@ -91,7 +92,7 @@ void Field::printResult() const{
     if(isOver() && winner!=EMPTY){
         print();
         cout<<endl<<endl;
-        if(winner==RED) cout<<"RED WON! YAY!"<<endl;
-        else cout<<"YELLOW WON! YAY!"<<endl;
+        if(winner==RED) cout<<RED_WIN_MESSAGE<<endl;
+        else cout<<YELLOW_WIN_MESSAGE<<endl;
     }
 }

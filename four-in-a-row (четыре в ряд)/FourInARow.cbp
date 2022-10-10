@@ -34,6 +34,7 @@
 		</Compiler>
 		<Unit filename="field.cpp" />
 		<Unit filename="field.h" />
+		<Unit filename="field_consts.cpp" />
 		<Unit filename="field_consts.h" />
 		<Unit filename="main.cpp" />
 		<Extensions />
