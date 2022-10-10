@@ -10,3 +10,17 @@
 	<iostream>
 	<stdlib.h>
 
+1665368306 source:c:\users\glaster\desktop\cpp\four-in-a-row (четыре в ряд)\field.cpp
+	"field.h"
+	"field_consts.h"
+	<iostream>
+	<stdlib.h>
+
+1664806515 c:\users\glaster\desktop\cpp\four-in-a-row (четыре в ряд)\field.h
+
+1664806515 source:c:\users\glaster\desktop\cpp\four-in-a-row (четыре в ряд)\main.cpp
+	<iostream>
+	"field.h"
+
+1665368384 c:\users\glaster\desktop\cpp\four-in-a-row (четыре в ряд)\field_consts.h
+

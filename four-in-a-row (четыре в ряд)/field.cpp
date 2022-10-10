@@ -1,4 +1,5 @@
 #include "field.h"
+#include "field_consts.h"
 #include <iostream>
 #include <stdlib.h>
 using namespace std;
@@ -49,9 +50,9 @@ void Field::print() const{
         cout<<endl;
         for(int j=0; j<FIELD_HEIGHT; j++){
             Cell currentcell = cells[i][j];
-            if(currentcell==EMPTY) cout<<"E ";
-            else if(currentcell==RED) cout<<"R ";
-            else cout<<"Y ";
+            if(currentcell==EMPTY) cout<<CHAR_EMPTY;
+            else if(currentcell==RED) cout<<CHAR_RED;
+            else cout<<CHAR_YELLOW;
         }
     }
 }
