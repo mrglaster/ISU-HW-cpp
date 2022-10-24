@@ -1,0 +1,12 @@
+# depslib dependency file v1.0
+1666581999 source:c:\users\glaster\desktop\containers(vectors+exceptions)\main.cpp
+	<iostream>
+	"CustomVector.h"
+
+1666582144 source:c:\users\glaster\desktop\containers(vectors+exceptions)\customvector.cpp
+	<iostream>
+	"CustomVector.h"
+
+1666582064 c:\users\glaster\desktop\containers(vectors+exceptions)\customvector.h
+	<iostream>
+
