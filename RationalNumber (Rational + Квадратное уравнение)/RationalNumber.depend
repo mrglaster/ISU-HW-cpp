@@ -1,0 +1,24 @@
+# depslib dependency file v1.0
+1666578786 source:c:\users\glaster\desktop\rationalnumber\rational.cpp
+	<iostream>
+	<stdexcept>
+	<limits.h>
+	"Rational.h"
+
+1666074654 c:\users\glaster\desktop\rationalnumber\rational.h
+	<iostream>
+
+1666578891 source:c:\users\glaster\desktop\rationalnumber\main.cpp
+	<iostream>
+	<cstdio>
+	<windows.h>
+	"Rational.h"
+	"quadratic_equation.h"
+
+1666074088 c:\users\glaster\desktop\rationalnumber\quadratic_equation.h
+	"Rational.h"
+
+1666072395 source:c:\users\glaster\desktop\rationalnumber\quadratic_equation.cpp
+	"quadratic_equation.h"
+	<stdexcept>
+
