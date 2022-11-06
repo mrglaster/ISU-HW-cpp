@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1667738406 source:c:\users\glaster\desktop\templates and linear lists\templatesandlists\main.cpp
+	<iostream>
+	"LineList.h"
+
+1667739541 c:\users\glaster\desktop\templates and linear lists\templatesandlists\linelist.h
+	<iostream>
+	<ostream>
+	"LineListElem.h"
+
+1667739092 c:\users\glaster\desktop\templates and linear lists\templatesandlists\linelistelem.h
+	"LineList.h"
+
