@@ -6,111 +6,175 @@
 #include "LineListElem.h"
 using namespace std;
 
-class LineListException{};
 
-template <class T> class LineList {
+/** Exception class */
+class LineListException {};
 
-   LineListElem<T>* start;
-   LineList(const LineList& list);
-   LineList& operator =(const LineList& list);
-   int list_size = 0;
-   public:
-        LineList();
-        ~LineList();
-        LineListElem<T>* getStart();
-        void deleteFirst();
-        void deleteAfter(LineListElem<T>* ptr);
-        void insertFirst(const T& data);
-        void insertAfter(LineListElem<T>* ptr, const T& data);
-        void increaseLenVal();
-        void decreaseLenVal();
+/** Linear List Template */
+template <class T> class LinearList
+{
 
-        int get_size();
+    LinearListElement<T>* start;
+    LinearList(const LinearList& list);
+    LinearList& operator =(const LinearList& list);
+    int list_size = 0;
 
-        template<class X> friend ostream& operator <<(ostream& out, LineList& list);
+public:
+    /** Constructor and destructor */
+    LinearList();
+    ~LinearList();
+
+    /** Getting of first and latest element*/
+    LinearListElement<T>* getStart();
+    LinearListElement<T>* getLast();
+
+    /**Manipulations with list's elements*/
+    void deleteFirst();
+    void deleteAfter(LinearListElement<T>* ptr);
+    void insertFirst(const T& data);
+    void append(const T& data);
+    void insertAfter(LinearListElement<T>* ptr, const T& data);
+
+    /** Operations with sizes */
+    void increaseLenVal();
+    void decreaseLenVal();
+    int get_size();
+
+    /**Operator(s) oveload*/
+    template<class X> friend ostream& operator <<(ostream& out, LinearList& list);
+
 };
 
-template <class T> LineListElem<T>* LineList<T>::getStart(){
+/** Get first Element*/
+template <class T> LinearListElement<T>* LinearList<T>::getStart()
+{
     return start;
 }
 
-template <class T> void LineList<T>::deleteFirst() {
-        if (start){
-            LineListElem<T>* temp = start->next;
-            delete start;
-            start = temp;
-        }
+/**Get latest List's element. Works not effective*/
+template <class T> LinearListElement<T>* LinearList<T>::getLast()
+{
+    LinearListElement<T>* current_item = start;
+    LinearListElement<T>* previous_item = current_item;
+    int cntr = 0;
+    while(cntr < get_size())
+    {
+        cntr+=1;
+        previous_item = current_item;
+        current_item = current_item->next;
+    }
+    return previous_item;
+}
+
+/** Delete first list's element */
+template<class T> void LinearList<T>::deleteFirst()
+{
+    if (start)
+    {
+        LinearListElement<T>* temp = start->next;
+        delete start;
+        start = temp;
+    }
     else throw LineListException();
 }
 
-
-template <class T> void LineList<T>::increaseLenVal(){
+/** Increase List's size value*/
+template <class T> void LinearList<T>::increaseLenVal()
+{
     list_size++;
 }
 
-template <class T> void LineList<T>::decreaseLenVal(){
+/** Decrease List's size value */
+template <class T> void LinearList<T>::decreaseLenVal()
+{
     list_size--;
 }
 
-
-template <class T> int LineList<T>::get_size(){
+/** Get size of the list */
+template <class T> int LinearList<T>::get_size()
+{
     return list_size;
 }
 
-template <class T> LineList<T>::LineList() {
+/** Initialize Linear List*/
+template <class T> LinearList<T>::LinearList()
+{
     start = 0;
 }
 
-template <class T> LineList<T>::~LineList(){
-    while (start){
+/** Destructor of the Linear List*/
+template <class T> LinearList<T>::~LinearList()
+{
+    while (start)
+    {
         deleteFirst();
         decreaseLenVal();
     }
 }
 
-
-template <class T> void LineList<T>::insertFirst(const T& data){
-   LineListElem<T>* second = start;
-   start = new LineListElem<T>(data, second);
-   increaseLenVal();
+/** Insert element to list's start*/
+template <class T> void LinearList<T>::insertFirst(const T& data)
+{
+    LinearListElement<T>* second = start;
+    start = new LinearListElement<T>(data, second);
+    increaseLenVal();
 }
 
-template <class T> void LineList<T>::deleteAfter(LineListElem<T>* ptr){
-      if (ptr && ptr->next) {
-            LineListElem<T>* temp = ptr->next;
-            ptr->next = ptr->next->next;
-            delete temp;
-            decreaseLenVal();
-      } else throw LineListException();
+/** Append element to list. NOT EFFECTIVE! */
+template <class T> void LinearList<T>::append(const T& data)
+{
+    LinearListElement<T>* ptr = getLast();
+    insertAfter(ptr, data);
 }
 
-template <class T> void LineList<T>::insertAfter(LineListElem<T>* ptr, const T& data){
-    if (ptr){
-        LineListElem<T>* temp = ptr->next;
-        ptr->next = new LineListElem<T>(data, temp);
+/** Delete Element after another one */
+template <class T> void LinearList<T>::deleteAfter(LinearListElement<T>* ptr)
+{
+    if (ptr && ptr->next)
+    {
+        LinearListElement<T>* temp = ptr->next;
+        ptr->next = ptr->next->next;
+        delete temp;
+        decreaseLenVal();
+    }
+    else throw LineListException();
+}
+
+/** Insert element after another one */
+template <class T> void LinearList<T>::insertAfter(LinearListElement<T>* ptr, const T& data)
+{
+    if (ptr)
+    {
+        LinearListElement<T>* temp = ptr->next;
+        ptr->next = new LinearListElement<T>(data, temp);
         increaseLenVal();
     }
 }
 
-template <class T> ostream& operator <<(ostream& out, LineList<T>& list) {
-    LineListElem<T>* ptr = list.getStart();
+/** Output operator oveload*/
+template <class T> ostream& operator <<(ostream& out, LinearList<T>& list)
+{
+    LinearListElement<T>* ptr = list.getStart();
     if (!ptr) out<<"EMPTY ";
-    else while (ptr){
-      out<<ptr->getData()<<' ';
-      ptr = ptr->getNext();
-    }
+    else while (ptr)
+        {
+            out<<ptr->getData()<<' ';
+            ptr = ptr->getNext();
+        }
     return out;
 }
 
 
-void test_linelist(){
-    LineList<int> test_list;
+/** Functions testing some operations with Linear List*/
+void test_linelist()
+{
+    LinearList<int> test_list;
     cout<<"Test Starts. List initialized: "<<test_list<<endl;
     test_list.insertFirst(10);
     cout<<"Step 1. Added 10: "<<test_list<<endl;
     cout<<"Length is: "<<test_list.get_size()<<endl<<endl;
 
-    LineListElem<int>* ptr = test_list.getStart();
+    LinearListElement<int>* ptr = test_list.getStart();
     test_list.insertAfter(ptr, 15);
     cout<<"Step 2. Added 15: "<<test_list<<endl;
     cout<<"Length is: "<<test_list.get_size()<<endl<<endl;
@@ -122,6 +186,10 @@ void test_linelist(){
     test_list.insertFirst(7);
     cout<<"Inserted to start 7: "<<test_list<<endl;
     cout<<"Length is: "<<test_list.get_size()<<endl<<endl;
+
+    test_list.append(42);
+    cout<<"After true append "<<test_list<<endl;
+
 }
 
 #endif // LINELIST_H_INCLUDED
