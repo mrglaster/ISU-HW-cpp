@@ -1,4 +1,5 @@
 #include <iostream>
+#include <chrono>
 #include "LineList.h"
 using namespace std;
 
@@ -44,7 +45,7 @@ void josephus_problem(int kn){
         if(it->getNext() == 0) it = players_list.getStart();
         else it = it->getNext();
     }
-    cout<<"Survived player is: "<<players_list;
+    cout<<"Survived player is: "<<players_list<<endl;
 }
 
 /** Checks if inputed data is correct*/
@@ -73,11 +74,15 @@ void init_game(){
     //special case handling
     if(kn == 1 ){
         cout<<"Survived player is: "<<players_list.getLast()->getData();
+        cout<<"Time spent: 0 mks"<<endl;
         exit(0);
     }
 
     //Solve the Josephus Problem
+    auto start_time = std::chrono::high_resolution_clock::now();
     josephus_problem(kn);
+    auto end_time = std::chrono::high_resolution_clock::now();
+    printf("Solving took %f mks\n", (double)(std::chrono::duration_cast<std::chrono::microseconds>(end_time - start_time).count()) );
 }
 
 
