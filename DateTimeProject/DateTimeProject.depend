@@ -1,0 +1,24 @@
+# depslib dependency file v1.0
+1669008743 source:c:\users\glaster\desktop\date-time-project\datetimeproject\main.cpp
+	<iostream>
+	"TimeClass.h"
+	"DateClass.h"
+
+1669006406 c:\users\glaster\desktop\date-time-project\datetimeproject\timeclass.h
+	<iostream>
+
+1669007662 source:c:\users\glaster\desktop\date-time-project\datetimeproject\timeclass.cpp
+	<iostream>
+	<ostream>
+	"TimeClass.h"
+
+1669008877 c:\users\glaster\desktop\date-time-project\datetimeproject\dateclass.h
+	<iostream>
+	"TimeClass.h"
+	<strings.h>
+
+1669008952 source:c:\users\glaster\desktop\date-time-project\datetimeproject\dateclass.cpp
+	"DateClass.h"
+	"TimeClass.h"
+	<iostream>
+
