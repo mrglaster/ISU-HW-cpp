@@ -163,6 +163,7 @@ Date calculate_easter_date_catolic(Date current_date){
     return Date(intYear, easterMonth, easterDay, Time());
 }
 
+/**Calculates Orthodox Easter date for current year*/
 Date calculate_easter_date_orthodox(Date current_date){
     Date catolic = calculate_easter_date_catolic(current_date);
     int jul_cat = gregorian_to_julian_days(catolic);
