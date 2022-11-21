@@ -49,3 +49,8 @@ char* get_day_of_week(Date our_date);
 
 Date calculate_easter_date_catolic(Date current_date);
 
+Date calculate_easter_date_orthodox(Date current_date);
+
+Date julian_day_to_date(int julian_days);
+
+
