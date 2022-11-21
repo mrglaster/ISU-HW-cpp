@@ -92,6 +92,25 @@ int gregorian_to_julian_days(Date our_date){
     return our_date.get_day()+div1+365*y+div2-div3+div4-32045;
 }
 
+/** Converts Number of Julian Day to regular date*/
+Date julian_day_to_date(int julian_days) {
+  int f2 = julian_days + 68569;
+  int e2 = (4 * f2) / 146097;
+  int g2 = f2 - (146097 * e2 + 3) / 4;
+  int h2 = 4000 * (g2 + 1) / 1461001;
+  int t2 = g2 - (1461 * h2 / 4) + 31;
+  int u2 = (80 * t2) / 2447;
+  int v2 = u2 / 11;
+
+  int year = 100 * (e2 - 49) + h2 + v2;
+  int mon = u2 + 2 - 12 * v2;
+  int day = t2 - 2447 * u2 / 80;
+
+  return Date(year, mon, day, Time());
+
+}
+
+
 /**Difference between dates, in days*/
 int day_difference(Date first_date, Date second_date){
     int day_1 = gregorian_to_julian_days(first_date);
@@ -144,3 +163,8 @@ Date calculate_easter_date_catolic(Date current_date){
     return Date(intYear, easterMonth, easterDay, Time());
 }
 
+Date calculate_easter_date_orthodox(Date current_date){
+    Date catolic = calculate_easter_date_catolic(current_date);
+    int jul_cat = gregorian_to_julian_days(catolic);
+    return julian_day_to_date(jul_cat-6);
+}
