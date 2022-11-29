@@ -42,8 +42,10 @@ class Time{
          void setTime(int h, int m, int s);
          void update_keepinmind(int update_value);
 
+
          //Foreign functions
          void simplify();
+         void time_valid_check();
 };
 
 #endif // TIMECLASS_H_INCLUDED

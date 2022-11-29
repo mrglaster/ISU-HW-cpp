@@ -18,30 +18,35 @@ Time::Time(){
     hours = 0;
     minutes =0;
     seconds = 0;
+    time_valid_check();
 }
 
 Time::~Time(){
     hours = 0;
     minutes = 0;
     seconds = 0;
+    time_valid_check();
 }
 
 Time::Time(int hours_g){
     hours = hours_g;
     minutes = 0;
     seconds = 0;
+    time_valid_check();
 }
 
 Time::Time(int hours_g, int minutes_g){
     hours = hours_g;
     minutes = minutes_g;
     seconds = 0;
+    time_valid_check();
 }
 
 Time::Time(int hours_g, int minutes_g, int seconds_g){
     hours = hours_g;
     minutes = minutes_g;
     seconds = seconds_g;
+    time_valid_check();
 }
 
 /**
@@ -151,3 +156,9 @@ void Time::simplify(){
     }
 }
 
+void Time::time_valid_check(){
+    if(seconds > 60 || minutes > 60 || hours > 24 || seconds < 0 || minutes < 0 || hours < 0 ){
+        cout<<"Wrong time! Can't be real time: "<<hours<<" : "<<minutes<<" : "<<seconds<<endl;
+        exit(-1);
+    }
+}

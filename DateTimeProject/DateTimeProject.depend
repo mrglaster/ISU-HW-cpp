@@ -22,3 +22,37 @@
 	"TimeClass.h"
 	<iostream>
 
+1669701078 source:c:\users\glaster\desktop\datetimeproject\dateclass.cpp
+	"DateClass.h"
+	"TimeClass.h"
+	<iostream>
+
+1669659039 c:\users\glaster\desktop\datetimeproject\dateclass.h
+	<iostream>
+	"TimeClass.h"
+	<strings.h>
+
+1669658489 c:\users\glaster\desktop\datetimeproject\timeclass.h
+	<iostream>
+
+1669658644 source:c:\users\glaster\desktop\datetimeproject\timeclass.cpp
+	<iostream>
+	<ostream>
+	"TimeClass.h"
+
+1669703380 source:c:\users\glaster\desktop\datetimeproject\dateio.cpp
+	<sstream>
+	<iostream>
+	<algorithm>
+	<cmath>
+	<stdlib.h>
+	"DateIO.h"
+
+1669701653 c:\users\glaster\desktop\datetimeproject\dateio.h
+	"DateClass.h"
+
+1669703179 source:c:\users\glaster\desktop\datetimeproject\main.cpp
+	<iostream>
+	"DateClass.h"
+	"DateIO.h"
+

@@ -27,14 +27,12 @@ class Date{
         void set_day (int day);
         void set_month(int month);
         void set_time(Time time);
+        void date_validation();
 
 
 
 };
 
-
-
-#endif // DATECLASS_H_INCLUDED
 
 
 int gregorian_to_julian_days(Date our_date);
@@ -53,4 +51,5 @@ Date calculate_easter_date_orthodox(Date current_date);
 
 Date julian_day_to_date(int julian_days);
 
+#endif // DATECLASS_H_INCLUDED
 

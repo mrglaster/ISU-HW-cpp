@@ -13,12 +13,14 @@ Date::Date(int yr, int mth, int d, Time tm){
     month = mth;
     day = d;
     time = tm;
+    date_validation();
 }
 
 Date::Date(){
     year = 1900;
     month = 1;
     day = 1;
+    date_validation();
 }
 
 
@@ -126,7 +128,7 @@ bool is_year_leap(Date date){
     return (year%400==0)||((year%4==0)&&(year%100!=0));
 }
 
-/**Gets day of the week by date as number (0 - sunday, 6 - saturday*/
+/**Gets day of the week by date as number (0 - Sunday, 6 - Saturday*/
 int get_day_of_week_numeric(Date our_date){
     int a, y, m;
     a = ( 14 - our_date.get_month()) / 12;
@@ -168,4 +170,11 @@ Date calculate_easter_date_orthodox(Date current_date){
     Date catolic = calculate_easter_date_catolic(current_date);
     int jul_cat = gregorian_to_julian_days(catolic);
     return julian_day_to_date(jul_cat-6);
+}
+
+void Date::date_validation(){
+    if (day > 31 || month > 12 || day < 1 || month < 1){
+        cout<<"Wrong date data: "<<day<<"."<<month<<"."<<year<<endl;
+        exit(-1);
+    }
 }
