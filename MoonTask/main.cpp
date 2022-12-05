@@ -68,8 +68,9 @@ void process_moon_file(string filename){
     } while ((date % 100 == global_day) || (set == -1) || (rise == -1));
 
     cout<<endl<<endl;
+    cout << "Date: " << global_day<<"."<<global_month<<"."<<global_year<<endl;
     cout << "Moon rise: " << enter(rise / 3600) << rise / 3600 << ":" << enter(rise % 3600 / 60) << rise % 3600 / 60 << ":" << enter(rise % 60) << rise % 60 << endl;
-    cout << "Moon culmination: " << enter(climax / 10000) << climax / 10000 << ":" << enter(climax / 100 % 100) << climax / 100 % 100 << ":" << enter(climax % 100) << climax % 100 << endl;
+    cout << "Moon climax: " << enter(climax / 10000) << climax / 10000 << ":" << enter(climax / 100 % 100) << climax / 100 % 100 << ":" << enter(climax % 100) << climax % 100 << endl;
     cout << "Moonset: " << enter(set / 3600) << set / 3600 << ":" << enter(set % 3600 / 60) << set % 3600 / 60 << ":" << enter(set % 60) << set % 60 << endl;
 }
 
