@@ -1,0 +1,40 @@
+# depslib dependency file v1.0
+1670861078 source:c:\users\glaster\desktop\graphsalgorithms\graphsalgorithms\main.cpp
+	<iostream>
+	"Node.h"
+	"Graph.h"
+	"BFS.h"
+
+1670861030 source:c:\users\glaster\desktop\graphsalgorithms\graphsalgorithms\bfs.cpp
+	"BFS.h"
+
+1670861015 c:\users\glaster\desktop\graphsalgorithms\graphsalgorithms\bfs.h
+	"Graph.h"
+
+1670859893 c:\users\glaster\desktop\graphsalgorithms\graphsalgorithms\graph.h
+	"Node.h"
+	<iostream>
+	<set>
+
+1670859478 c:\users\glaster\desktop\graphsalgorithms\graphsalgorithms\node.h
+	<string>
+	<set>
+	<queue>
+
+1670211163 source:c:\users\glaster\desktop\graphsalgorithms\graphsalgorithms\dfs.cpp
+	"DFS.h"
+
+1670216060 c:\users\glaster\desktop\graphsalgorithms\graphsalgorithms\dfs.h
+	"Graph.h"
+
+1670860976 source:c:\users\glaster\desktop\graphsalgorithms\graphsalgorithms\graph.cpp
+	<iostream>
+	<fstream>
+	<string>
+	<sstream>
+	"Graph.h"
+	"Node.h"
+
+1670291778 source:c:\users\glaster\desktop\graphsalgorithms\graphsalgorithms\node.cpp
+	"Node.h"
+
