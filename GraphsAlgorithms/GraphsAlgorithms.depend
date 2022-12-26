@@ -38,3 +38,46 @@
 1670291778 source:c:\users\glaster\desktop\graphsalgorithms\graphsalgorithms\node.cpp
 	"Node.h"
 
+1672072397 source:c:\users\mrglaster\desktop\graphsalgorithms\bfs.cpp
+	"BFS.h"
+
+1671426548 c:\users\mrglaster\desktop\graphsalgorithms\bfs.h
+	"Graph.h"
+
+1672072585 c:\users\mrglaster\desktop\graphsalgorithms\graph.h
+	"Node.h"
+	<iostream>
+	<set>
+
+1672072902 c:\users\mrglaster\desktop\graphsalgorithms\node.h
+	<string>
+	<set>
+	<queue>
+
+1672073464 source:c:\users\mrglaster\desktop\graphsalgorithms\graph.cpp
+	<iostream>
+	<fstream>
+	<string>
+	<sstream>
+	<regex>
+	"Graph.h"
+	"Node.h"
+	"BFS.h"
+
+1672073608 source:c:\users\mrglaster\desktop\graphsalgorithms\node.cpp
+	"Node.h"
+
+1672073612 source:c:\users\mrglaster\desktop\graphsalgorithms\main.cpp
+	<iostream>
+	"Node.h"
+	"Graph.h"
+	"BFS.h"
+
+1671426548 source:c:\users\mrglaster\desktop\graphsalgorithms\dfs.cpp
+	"DFS.h"
+	"Node.h"
+	"Graph.h"
+
+1671426548 c:\users\mrglaster\desktop\graphsalgorithms\dfs.h
+	"Graph.h"
+

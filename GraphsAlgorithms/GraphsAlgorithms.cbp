@@ -34,6 +34,8 @@
 		</Compiler>
 		<Unit filename="BFS.cpp" />
 		<Unit filename="BFS.h" />
+		<Unit filename="DFS.cpp" />
+		<Unit filename="DFS.h" />
 		<Unit filename="Graph.cpp" />
 		<Unit filename="Graph.h" />
 		<Unit filename="Node.cpp" />

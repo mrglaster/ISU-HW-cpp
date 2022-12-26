@@ -6,13 +6,15 @@
 #include <set>
 
 typedef std::set<Node*>::const_iterator node_iterator;
+
+class GraphException{};
+typedef std::set<Node*>::const_iterator node_iterator;
 class Graph {
    private:
     std::set<Node*> nodes;
-    typedef std::set<Node*>::const_iterator node_iterator;
    public:
 
-        Graph(char* file_name);
+        Graph(char* file_name, int mode);
 
         Node* get_node_bid(int id);
 
@@ -33,8 +35,7 @@ class Graph {
 
         std::set<Node*>getNodes();
         int get_nodes_amount();
-
-
+        void graphSplitter();
 };
 
 #endif // GRAPH_H_INCLUDED

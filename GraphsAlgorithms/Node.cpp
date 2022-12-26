@@ -2,7 +2,6 @@
 
 /**Adds a neighbor to the point*/
 void Node::addNeighbour(Node* neighbour){
-    //check by name in neighbours
     neighbours.insert(neighbour);
 }
 
@@ -10,3 +9,4 @@ void Node::addNeighbour(Node* neighbour){
 void Node::removeNeighbour(Node* neighbour){
     neighbours.erase(neighbour);
 }
+
