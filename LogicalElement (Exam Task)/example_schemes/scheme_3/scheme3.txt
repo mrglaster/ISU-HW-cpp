@@ -1,0 +1,9 @@
+AND 0 1
+OR 1 0
+AND 0 0
+NOT 1
+BUF 0
+CON 0 2 0
+CON 1 2 1
+CON 2 3 0
+CON 2 4 0

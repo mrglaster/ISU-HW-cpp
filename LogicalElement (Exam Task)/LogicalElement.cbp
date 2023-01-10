@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="LogicalElement" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/LogicalElement" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/LogicalElement" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-fexceptions" />
+		</Compiler>
+		<Unit filename="headers/ConnectionsGraph/ConnectionsGraph.h" />
+		<Unit filename="headers/Demonstration/Demonstration.h" />
+		<Unit filename="headers/LogicalElements/AndElement.h" />
+		<Unit filename="headers/LogicalElements/BufferElement.h" />
+		<Unit filename="headers/LogicalElements/LogicalElement.h" />
+		<Unit filename="headers/LogicalElements/NandElement.h" />
+		<Unit filename="headers/LogicalElements/NorElement.h" />
+		<Unit filename="headers/LogicalElements/NotElement.h" />
+		<Unit filename="headers/LogicalElements/OrElement.h" />
+		<Unit filename="headers/LogicalElements/XnorElement.h" />
+		<Unit filename="headers/LogicalElements/XorElement.h" />
+		<Unit filename="headers/LogicalScheme/LogicalScheme.h" />
+		<Unit filename="headers/TablePrinter/TablePrinter.h" />
+		<Unit filename="main.cpp" />
+		<Unit filename="sources/ConnectionsGraph/ConnectionsGraph.cpp" />
+		<Unit filename="sources/Demonstration/Demonstration.cpp" />
+		<Unit filename="sources/LogicalElement/LogicalElement.cpp" />
+		<Unit filename="sources/LogicalScheme/LogicalScheme.cpp" />
+		<Extensions>
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

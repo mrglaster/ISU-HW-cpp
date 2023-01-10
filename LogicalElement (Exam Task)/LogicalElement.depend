@@ -1,0 +1,127 @@
+# depslib dependency file v1.0
+1673311604 source:c:\users\mrglaster\desktop\logicalelement\main.cpp
+	<iostream>
+	"headers/Demonstration/Demonstration.h"
+	"headers/LogicalScheme/LogicalScheme.h"
+	<random>
+	"headers/TablePrinter/TablePrinter.h"
+
+1673032539 c:\users\mrglaster\desktop\logicalelement\headers\andelement.h
+	"LogicalElement.h"
+	<vector>
+
+1673030034 c:\users\mrglaster\desktop\logicalelement\headers\logicalelement.h
+	<vector>
+
+1673029693 c:\users\mrglaster\desktop\logicalelement\headers\orelement.h
+	<vector>
+	"LogicalElement.h"
+
+1673032444 c:\users\mrglaster\desktop\logicalelement\headers\xorelement.h
+	<vector>
+	"LogicalElement.h"
+
+1673032409 c:\users\mrglaster\desktop\logicalelement\headers\nandelement.h
+	<vector>
+	"LogicalElement.h"
+
+1673032469 c:\users\mrglaster\desktop\logicalelement\headers\norelement.h
+	<vector>
+	"LogicalElement.h"
+
+1673195468 c:\users\mrglaster\desktop\logicalelement\headers\logicalelements\bufferelement.h
+	<vector>
+	"LogicalElement.h"
+
+1673309349 c:\users\mrglaster\desktop\logicalelement\headers\logicalelements\logicalelement.h
+	<vector>
+	<string>
+
+1673032539 c:\users\mrglaster\desktop\logicalelement\headers\logicalelements\andelement.h
+	"LogicalElement.h"
+	<vector>
+
+1673029693 c:\users\mrglaster\desktop\logicalelement\headers\logicalelements\orelement.h
+	<vector>
+	"LogicalElement.h"
+
+1673076943 c:\users\mrglaster\desktop\logicalelement\headers\logicalelements\notelement.h
+	<vector>
+	"LogicalElement.h"
+
+1673195236 c:\users\mrglaster\desktop\logicalelement\headers\logicalelements\nandelement.h
+	<vector>
+	"LogicalElement.h"
+
+1673311883 source:c:\users\mrglaster\desktop\logicalelement\sources\logicalscheme\logicalscheme.cpp
+	<vector>
+	<iostream>
+	<fstream>
+	<sstream>
+	<string>
+	<map>
+	"../../headers/LogicalScheme/LogicalScheme.h"
+	"../../headers/LogicalElements/LogicalElement.h"
+	"../../headers/LogicalElements/AndElement.h"
+	"../../headers/LogicalElements/BufferElement.h"
+	"../../headers/LogicalElements/OrElement.h"
+	"../../headers/LogicalElements/NandElement.h"
+	"../../headers/LogicalElements/NorElement.h"
+	"../../headers/LogicalElements/NotElement.h"
+	"../../headers/LogicalElements/XnorElement.h"
+	"../../headers/LogicalElements/XorElement.h"
+	"../../headers/TablePrinter/TablePrinter.h"
+	"../../headers/ConnectionsGraph/ConnectionsGraph.h"
+
+1673310913 c:\users\mrglaster\desktop\logicalelement\headers\logicalscheme\logicalscheme.h
+	<vector>
+	<map>
+	<sstream>
+	"../LogicalElements/LogicalElement.h"
+
+1673310447 source:c:\users\mrglaster\desktop\logicalelement\sources\logicalelement\logicalelement.cpp
+	<vector>
+	<string>
+	<stdexcept>
+	"../../headers/LogicalElements/LogicalElement.h"
+
+1673310970 c:\users\mrglaster\desktop\logicalelement\headers\demonstration\demonstration.h
+
+1673312055 source:c:\users\mrglaster\desktop\logicalelement\sources\demonstration\demonstration.cpp
+	<iostream>
+	"../../headers/LogicalElements/BufferElement.h"
+	"../../headers/LogicalElements/AndElement.h"
+	"../../headers/LogicalElements/OrElement.h"
+	"../../headers/LogicalElements/NotElement.h"
+	"../../headers/LogicalElements/NandElement.h"
+	"../../headers/LogicalScheme/LogicalScheme.h"
+	"../../headers/Demonstration/Demonstration.h"
+
+1673195157 c:\users\mrglaster\desktop\logicalelement\headers\logicalelements\norelement.h
+	<vector>
+	"LogicalElement.h"
+
+1673202377 c:\users\mrglaster\desktop\logicalelement\headers\logicalelements\xnorelement.h
+	"LogicalElement.h"
+	<vector>
+
+1673195310 c:\users\mrglaster\desktop\logicalelement\headers\logicalelements\xorelement.h
+	<vector>
+	"LogicalElement.h"
+
+1673288159 c:\users\mrglaster\desktop\logicalelement\headers\tableprinter\tableprinter.h
+	<iostream>
+	<sstream>
+	<string>
+	<iomanip>
+	<vector>
+	<numeric>
+
+1673286835 c:\users\mrglaster\desktop\logicalelement\headers\connectionsgraph\connectionsgraph.h
+	<vector>
+
+1673287298 source:c:\users\mrglaster\desktop\logicalelement\sources\connectionsgraph\connectionsgraph.cpp
+	"../../headers/ConnectionsGraph/ConnectionsGraph.h"
+	<vector>
+	<list>
+
