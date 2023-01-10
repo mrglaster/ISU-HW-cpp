@@ -10,7 +10,6 @@ using namespace std;
 
 int main(){
     srand(time(NULL));
-    demoPrintTruthTable();
-    demoRandomInputResultAffect();
+    demoFileInput();
     return 0;
 }
