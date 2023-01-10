@@ -125,7 +125,7 @@
 	<vector>
 	<list>
 
-1673327749 source:c:\users\mrglaster\desktop\logicalelement (exam task)\main.cpp
+1673328903 source:c:\users\mrglaster\desktop\logicalelement (exam task)\main.cpp
 	<iostream>
 	"headers/Demonstration/Demonstration.h"
 	"headers/LogicalScheme/LogicalScheme.h"
@@ -136,13 +136,14 @@
 
 1673327747 c:\users\mrglaster\desktop\logicalelement (exam task)\headers\demonstration\demonstration.h
 
-1673327518 c:\users\mrglaster\desktop\logicalelement (exam task)\headers\logicalscheme\logicalscheme.h
+1673328759 c:\users\mrglaster\desktop\logicalelement (exam task)\headers\logicalscheme\logicalscheme.h
 	<vector>
 	<map>
 	<sstream>
 	"../LogicalElements/LogicalElement.h"
+	"../ConnectionsGraph/ConnectionsGraph.h"
 
-1673327949 c:\users\mrglaster\desktop\logicalelement (exam task)\headers\logicalelements\logicalelement.h
+1673328669 c:\users\mrglaster\desktop\logicalelement (exam task)\headers\logicalelements\logicalelement.h
 	<vector>
 	<string>
 	<map>
@@ -200,7 +201,7 @@
 	<iostream>
 	"../../headers/LogicalElements/LogicalElement.h"
 
-1673327683 source:c:\users\mrglaster\desktop\logicalelement (exam task)\sources\logicalscheme\logicalscheme.cpp
+1673328837 source:c:\users\mrglaster\desktop\logicalelement (exam task)\sources\logicalscheme\logicalscheme.cpp
 	<vector>
 	<iostream>
 	<fstream>
@@ -209,14 +210,6 @@
 	<map>
 	"../../headers/LogicalScheme/LogicalScheme.h"
 	"../../headers/LogicalElements/LogicalElement.h"
-	"../../headers/LogicalElements/AndElement.h"
-	"../../headers/LogicalElements/BufferElement.h"
-	"../../headers/LogicalElements/OrElement.h"
-	"../../headers/LogicalElements/NandElement.h"
-	"../../headers/LogicalElements/NorElement.h"
-	"../../headers/LogicalElements/NotElement.h"
-	"../../headers/LogicalElements/XnorElement.h"
-	"../../headers/LogicalElements/XorElement.h"
 	"../../headers/TablePrinter/TablePrinter.h"
 	"../../headers/ConnectionsGraph/ConnectionsGraph.h"
 	"../../headers/BinaryProcessor/BinaryProcessor.h"
@@ -240,4 +233,25 @@
 
 1673318743 c:\users\mrglaster\desktop\logicalelement (exam task)\headers\binaryprocessor\binaryprocessor.h
 	<vector>
+
+1673328792 source:c:\users\mrglaster\desktop\logicalelement (exam task)\sources\logicalscheme\logicalschemeio.cpp
+	<vector>
+	<iostream>
+	<fstream>
+	<sstream>
+	<string>
+	<map>
+	"../../headers/LogicalScheme/LogicalScheme.h"
+	"../../headers/LogicalElements/LogicalElement.h"
+	"../../headers/LogicalElements/AndElement.h"
+	"../../headers/LogicalElements/BufferElement.h"
+	"../../headers/LogicalElements/OrElement.h"
+	"../../headers/LogicalElements/NandElement.h"
+	"../../headers/LogicalElements/NorElement.h"
+	"../../headers/LogicalElements/NotElement.h"
+	"../../headers/LogicalElements/XnorElement.h"
+	"../../headers/LogicalElements/XorElement.h"
+	"../../headers/TablePrinter/TablePrinter.h"
+	"../../headers/ConnectionsGraph/ConnectionsGraph.h"
+	"../../headers/BinaryProcessor/BinaryProcessor.h"
 

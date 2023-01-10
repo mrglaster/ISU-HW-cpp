@@ -5,14 +5,14 @@
 #include <map>
 #include <sstream>
 #include "../LogicalElements/LogicalElement.h"
-
+#include "../ConnectionsGraph/ConnectionsGraph.h"
 
 /**Logical Scheme class realisation*/
 class LogicalScheme{
     private:
         bool areElementsConnected(int startId, int endId);
         std::vector<LogicalElement*>schemeElements;
-
+        ConnectionsGraph*  cons  = new ConnectionsGraph(100);
     public:
 
         LogicalScheme(char* filename);

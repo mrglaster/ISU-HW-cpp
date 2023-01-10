@@ -52,6 +52,7 @@
 		<Unit filename="sources/Demonstration/Demonstration.cpp" />
 		<Unit filename="sources/LogicalElement/LogicalElement.cpp" />
 		<Unit filename="sources/LogicalScheme/LogicalScheme.cpp" />
+		<Unit filename="sources/LogicalScheme/LogicalSchemeIO.cpp" />
 		<Extensions>
 			<lib_finder disable_auto="1" />
 		</Extensions>

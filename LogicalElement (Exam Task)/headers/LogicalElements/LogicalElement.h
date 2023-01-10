@@ -22,9 +22,6 @@ class LogicalElement{
 
     public:
 
-        //TODO: move to protected field
-
-
         /**Virtual functions for LogicalElements*/
         virtual bool getResult() = 0;
         virtual std::string whoAmI() = 0;
@@ -65,6 +62,7 @@ class LogicalElement{
         /**Print values on element's inputs. Used for debug*/
         void printInputValues();
 
+        /**Returns pins connection history*/
         std::map<int,int> getPinHistoryMap(){
             return pinConnectionHistory;
         }
