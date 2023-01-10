@@ -5,8 +5,10 @@
 void demoShowElements();
 void demoHandsInput();
 void demoFileInput();
-void demoTruthTableGen();
 void demoLoopErrorCheck();
 void demoRandomInputs();
 void demoRandomInputResultAffect();
+void demoPrintInputElements();
+void demoPrintTruthTable();
+
 #endif // DEMONSTRATION_H_INCLUDED

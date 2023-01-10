@@ -29,6 +29,20 @@ class AndElement : public LogicalElement {
             elementValues = {0, 0, 0};
         }
 
+        /**Set ups element's inputs for concrete output value*/
+        void setUpOutputValue(bool value) override{
+            if (value) {
+                 elementValues[0] = 1;
+                 elementValues[1] = 1;
+                 elementValues[2] = 1;
+            } else {
+                elementValues[0] = 0;
+                elementValues[1] = 0;
+                elementValues[2] = 0;
+            }
+            updateElement();
+        }
+
         /**Returns value on the output of the element*/
         bool getResult() override {
             return elementValues[2];

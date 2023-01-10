@@ -48,6 +48,16 @@ class NotElement : public LogicalElement{
         std::string whoAmI() override{
             return "NOT";
         }
+
+        /**Set ups element's inputs for concrete output value*/
+        void setUpOutputValue(bool value) override{
+            if (value) {
+                 elementValues[0] = 0;
+            } else {
+                elementValues[0] = 1;
+            }
+            updateElement();
+        }
 };
 
 

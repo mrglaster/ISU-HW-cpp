@@ -43,6 +43,19 @@ class OrElement : public LogicalElement{
         std::string whoAmI() override{
             return "OR";
         }
+
+        /**Set ups element's inputs for concrete output value*/
+        void setUpOutputValue(bool value) override{
+            if (value) {
+                 elementValues[0] = 1;
+                 elementValues[1] = 1;
+            } else {
+                elementValues[0] = 0;
+                elementValues[1] = 0;
+            }
+            updateElement();
+        }
+
 };
 
 

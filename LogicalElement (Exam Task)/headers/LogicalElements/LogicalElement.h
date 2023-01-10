@@ -3,7 +3,7 @@
 
 #include <vector>
 #include <string>
-
+#include <map>
 
 
 /**General abstract LogicalElement class*/
@@ -16,14 +16,20 @@ class LogicalElement{
         bool isConnected = false;
         bool gotConnection = false;
 
+        std::map<int,int> pinConnectionHistory;
         std::vector<int> connectionsIds;
         std::vector<bool> elementValues;
 
     public:
+
+        //TODO: move to protected field
+
+
         /**Virtual functions for LogicalElements*/
         virtual bool getResult() = 0;
         virtual std::string whoAmI() = 0;
         virtual void updateElement() = 0;
+        virtual void setUpOutputValue(bool value) = 0;
 
         /**Required getters and setters*/
         int getId();
@@ -55,6 +61,13 @@ class LogicalElement{
 
         /**Randomly changes values on element's inputs*/
         void randomify();
+
+        /**Print values on element's inputs. Used for debug*/
+        void printInputValues();
+
+        std::map<int,int> getPinHistoryMap(){
+            return pinConnectionHistory;
+        }
 
 };
 

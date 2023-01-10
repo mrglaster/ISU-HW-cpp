@@ -79,12 +79,25 @@ void demoRandomInputs(){
     delete testScheme;
 }
 
-
+/**Demonstrates how randomly generated input values affect output value(s)*/
 void demoRandomInputResultAffect(){
     LogicalScheme* testScheme = new LogicalScheme("example_schemes/scheme_3/scheme3.txt");
     testScheme->printElements();
     testScheme->printSchemeResults();
     testScheme->generateRandomInputs(true);
     testScheme->printSchemeResults();
+}
+
+/**Prints only input elements*/
+void demoPrintInputElements(){
+    LogicalScheme* testScheme = new LogicalScheme("example_schemes/scheme_1/scheme1.txt");
+    testScheme->printInputElements();
+    delete[]  testScheme;
+}
+
+/**Truth table print demonstration*/
+void demoPrintTruthTable(){
+    LogicalScheme* testScheme = new LogicalScheme("example_schemes/scheme_1/scheme1.txt");
+    testScheme->printTruthTable();
 
 }

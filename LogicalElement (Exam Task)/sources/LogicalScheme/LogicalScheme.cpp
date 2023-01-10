@@ -19,6 +19,7 @@ using namespace std;
 
 #include "../../headers/TablePrinter/TablePrinter.h"
 #include "../../headers/ConnectionsGraph/ConnectionsGraph.h"
+#include "../../headers/BinaryProcessor/BinaryProcessor.h"
 
 ConnectionsGraph cons(100);
 
@@ -188,11 +189,12 @@ void LogicalScheme::addElement(LogicalElement& element){
 
 /**Adds the new connection to the scheme*/
 void LogicalScheme::addConnection(int sourceElemId, int destinationElemId, int destinationInputId){
-
     if (isValidId(sourceElemId) && isValidId(destinationElemId)) {
         if (destinationInputId <= schemeElements[destinationElemId]->getInputsMaxId() && destinationInputId >=0){
-            if (!cons.areConnected(destinationElemId, sourceElemId))
-                schemeElements[destinationElemId]->connectToMe(schemeElements[sourceElemId], destinationInputId);
+            if (!cons.areConnected(destinationElemId, sourceElemId)){
+                    schemeElements[destinationElemId]->connectToMe(schemeElements[sourceElemId], destinationInputId);
+                    resetElements();
+            }
             else throw std::invalid_argument("Error! Attempt to create the loop!");
 
         }
@@ -212,6 +214,18 @@ void LogicalScheme::printElements(){
         }
     }
 }
+
+/**Returns ids of output elements*/
+vector<int> LogicalScheme::getOutputElemIds(){
+    vector<int> resultsIds;
+    for (int i = 0; i < schemeElements.size(); i++){
+        if (schemeElements[i]->isResultElement()){
+             resultsIds.push_back(i);
+        }
+    }
+    return resultsIds;
+}
+
 
 /**Prints result values for current scheme*/
 void LogicalScheme::printSchemeResults(){
@@ -253,18 +267,14 @@ void LogicalScheme::updateConnections(){
             schemeElements[i]->updateElement();
         }
     }
+     resetElements();
 }
 
+/**Generates random values on inputElements inputs*/
 void LogicalScheme::generateRandomInputs(bool logToConsole){
     if (schemeElements.size() == 0) throw std::invalid_argument("Unable to generate random input values for the empty scheme!");
-    vector<int> inputIds;
+    vector<int> inputIds = getInputElemIds();
     int i;
-    for (i = 0; i < getElementsAmount(); i++){
-        if (schemeElements[i]->isInputElement()){
-            inputIds.push_back(i);
-        }
-    }
-
     if (inputIds.size() == 0) throw std::invalid_argument("Something went wrong during input elements finding!");
     TablePrinter ct("Input elements random output changes", inputIds.size(), 3);
     if (logToConsole){
@@ -278,8 +288,89 @@ void LogicalScheme::generateRandomInputs(bool logToConsole){
                   .printValue(schemeElements[i]->getResult());
             }
             schemeElements[i]->randomify();
+            resetElements();
             if (logToConsole) ct.printValue(schemeElements[i]->getResult());
 
     }
 
+}
+
+/**Returns ids of all input elements*/
+vector<int> LogicalScheme::getInputElemIds(){
+    if (!schemeElements.size()) throw std::invalid_argument("Unable to get elements from the empty scheme");
+    vector<int> ids;
+    for (int i = 0; i < getElementsAmount(); i++){
+        if (schemeElements[i]->isInputElement()) ids.push_back(i);
+    }
+    return ids;
+}
+
+
+/**Prints only input elements and their conditions*/
+void LogicalScheme::printInputElements(){
+    vector<int> elems = getInputElemIds();
+    if (!elems.size()) cout<<"No input elements found!"<<endl;
+    else {
+        TablePrinter ct("Input Elements", elems.size(), 3);
+        ct.setColumnHeader(0, "Element Id")
+          .setColumnHeader(1, "Element Type")
+          .setColumnHeader(2, "Output Condition");
+        for (int i = 0; i < elems.size(); i++){
+            ct.printValue(schemeElements[elems[i]]->getId());
+            ct.printValue(schemeElements[elems[i]]->whoAmI());
+            ct.printValue(schemeElements[elems[i]]->getResult());
+        }
+
+    }
+}
+
+
+/**Scheme's truth table generation*/
+void LogicalScheme::printTruthTable(){
+    vector<int> elems = getInputElemIds();
+    vector<int> outs = getOutputElemIds();
+    if (!outs.size()) throw std::invalid_argument("Can't create truth table for non-outputs scheme!");
+    int currentLength = elems.size();
+    int i;
+
+    if (!currentLength) cout<<"Unable to Create Truth table for empty/non-inputs scheme!"<<endl;
+    else {
+        int maxBin = binIntToDec(findMaxBinary(currentLength));
+        vector<vector<int>> combinations = getBinariesTo(maxBin);
+        if (!combinations.size()) cout<<"Something went wrong during truth table building..."<<endl;
+        else {
+                TablePrinter tp("Scheme truth table", combinations.size(), currentLength + 1);
+                for (i = 0; i < currentLength; i++){
+                    tp.setColumnHeader(i, schemeElements[elems[i]]->whoAmI()+"_"+std::to_string(schemeElements[elems[i]]->getId()));
+                }
+                tp.setColumnHeader(currentLength, "Result");
+                for (i = 0; i < combinations.size(); i++){
+                    vector<int> currentValues = combinations[i];
+                    if (currentValues.size() != currentLength) throw std::invalid_argument("Something went wrong during truth table building...");
+                    for (int j = 0; j < currentValues.size(); j++){
+                        schemeElements[elems[j]]->setUpOutputValue((bool)currentValues[j]);
+                        resetElements();
+                        tp.printValue(currentValues[j]);
+                    }
+
+                    string resultValue = "";
+                    for (int j = 0; j < outs.size(); j++){
+                        resultValue+= std::to_string(schemeElements[outs[j]]->getResult());
+                        resultValue+=" ";
+
+                    }
+                   tp.printValue(resultValue);
+                }
+        }
+    }
+}
+
+/**Updates elements after modifications*/
+void LogicalScheme::resetElements(){
+    for (int i = 0 ; i <schemeElements.size(); i++){
+         vector<int> elementsToUpdate = schemeElements[i]->getConnections();
+         for (int elementId = 0; elementId < elementsToUpdate.size(); elementId++){
+                schemeElements[elementsToUpdate[elementId]]->setValue(schemeElements[i]->getResult(), schemeElements[elementsToUpdate[elementId]]->getPinHistoryMap()[i]);
+        }
+    }
 }

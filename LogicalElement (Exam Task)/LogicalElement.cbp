@@ -32,6 +32,7 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="headers/BinaryProcessor/BinaryProcessor.h" />
 		<Unit filename="headers/ConnectionsGraph/ConnectionsGraph.h" />
 		<Unit filename="headers/Demonstration/Demonstration.h" />
 		<Unit filename="headers/LogicalElements/AndElement.h" />
@@ -46,6 +47,7 @@
 		<Unit filename="headers/LogicalScheme/LogicalScheme.h" />
 		<Unit filename="headers/TablePrinter/TablePrinter.h" />
 		<Unit filename="main.cpp" />
+		<Unit filename="sources/BinaryProcessor/BinaryProcessor.cpp" />
 		<Unit filename="sources/ConnectionsGraph/ConnectionsGraph.cpp" />
 		<Unit filename="sources/Demonstration/Demonstration.cpp" />
 		<Unit filename="sources/LogicalElement/LogicalElement.cpp" />

@@ -22,15 +22,22 @@ class LogicalScheme{
         bool isValidId(int id);
         int getElementsAmount();
         int getNewId();
+
         std::vector<LogicalElement*> getElements();
+        std::vector<int> getInputElemIds();
+        std::vector<int> getOutputElemIds();
 
         void updateConnections();
         void addElement(LogicalElement &element);
         void addConnection(int sourceElemId, int destinationElemId, int destinationInputId);
-        void printSchemeResults();
-        void printElements();
         void generateRandomInputs(bool logToConsole);
 
+        void printSchemeResults();
+        void printElements();
+        void printInputElements();
+        void printTruthTable();
+
+        void resetElements();
 
 };
 

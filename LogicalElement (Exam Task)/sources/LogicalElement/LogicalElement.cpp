@@ -1,6 +1,7 @@
 #include <vector>
 #include <string>
 #include <stdexcept>
+#include <iostream>
 #include "../../headers/LogicalElements/LogicalElement.h"
 
 
@@ -35,6 +36,7 @@ void LogicalElement::connectToMe(LogicalElement* element, int inputId) {
     element->isConnected = true;
     element->connectionsIds.push_back(id);
     gotConnection = true;
+    pinConnectionHistory.insert({element->getId(), inputId});
     updateElement();
 }
 
@@ -64,4 +66,17 @@ void LogicalElement::randomify(){
         elementValues[i] = rand()%2;
     }
     updateElement();
+}
+
+/**Returns connections of current element*/
+std::vector<int> LogicalElement::getConnections(){
+    return connectionsIds;
+}
+
+/**Prints current values on element's inputs*/
+void LogicalElement::printInputValues(){
+    for (int i = 0; i < elementValues.size(); i++){
+        std::cout<<elementValues[i]<<" ";
+    }
+    std::cout<<std::endl;
 }

@@ -3,6 +3,8 @@
 #include "headers/LogicalScheme/LogicalScheme.h"
 #include <random>
 #include "headers/TablePrinter/TablePrinter.h"
+#include "headers/BinaryProcessor/BinaryProcessor.h"
+#include <vector>
 using namespace std;
 
 
@@ -10,6 +12,6 @@ using namespace std;
 
 int main(){
     srand(time(NULL));
-    demoRandomInputResultAffect();
+    demoPrintTruthTable();
     return 0;
 }

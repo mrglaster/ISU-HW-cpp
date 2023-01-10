@@ -50,6 +50,18 @@ class NorElement : public LogicalElement{
         void updateElement() override{
             elementValues[2] = doNor(elementValues[0], elementValues[1]);
         }
+
+        /**Set ups element's inputs for concrete output value*/
+        void setUpOutputValue(bool value) override{
+            if (value) {
+                 elementValues[0] = 0;
+                 elementValues[1] = 0;
+            } else {
+                elementValues[0] = 1;
+                elementValues[1] = 1;
+            }
+            updateElement();
+        }
 };
 
 #endif // NORELEMENT_H_INCLUDED

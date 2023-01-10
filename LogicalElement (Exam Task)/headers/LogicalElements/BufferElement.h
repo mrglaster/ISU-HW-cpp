@@ -51,6 +51,18 @@ class BufferElement : public LogicalElement{
         std::string whoAmI() override{
             return "BUFFER";
         }
+
+        /**Set ups element's inputs for concrete output value*/
+        void setUpOutputValue(bool value) override{
+            if (value) {
+                 elementValues[0] = 1;
+            } else {
+                elementValues[0] = 0;
+            }
+            updateElement();
+        }
+
+
 };
 
 

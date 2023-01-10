@@ -49,6 +49,19 @@ class XnorElement : public LogicalElement {
         void updateElement() override{
             elementValues[2] = doXnor(elementValues[0], elementValues[1]);
         }
+
+        /**Set ups element's inputs for concrete output value*/
+        void setUpOutputValue(bool value) override{
+            if (value) {
+                 elementValues[0] = 0;
+                 elementValues[1] = 0;
+            } else {
+                elementValues[0] = 1;
+                elementValues[1] = 0;
+            }
+            updateElement();
+        }
+
 };
 
 

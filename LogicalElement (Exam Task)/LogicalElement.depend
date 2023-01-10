@@ -125,3 +125,119 @@
 	<vector>
 	<list>
 
+1673327749 source:c:\users\mrglaster\desktop\logicalelement (exam task)\main.cpp
+	<iostream>
+	"headers/Demonstration/Demonstration.h"
+	"headers/LogicalScheme/LogicalScheme.h"
+	<random>
+	"headers/TablePrinter/TablePrinter.h"
+	"headers/BinaryProcessor/BinaryProcessor.h"
+	<vector>
+
+1673327747 c:\users\mrglaster\desktop\logicalelement (exam task)\headers\demonstration\demonstration.h
+
+1673327518 c:\users\mrglaster\desktop\logicalelement (exam task)\headers\logicalscheme\logicalscheme.h
+	<vector>
+	<map>
+	<sstream>
+	"../LogicalElements/LogicalElement.h"
+
+1673327949 c:\users\mrglaster\desktop\logicalelement (exam task)\headers\logicalelements\logicalelement.h
+	<vector>
+	<string>
+	<map>
+
+1673288159 c:\users\mrglaster\desktop\logicalelement (exam task)\headers\tableprinter\tableprinter.h
+	<iostream>
+	<sstream>
+	<string>
+	<iomanip>
+	<vector>
+	<numeric>
+
+1673287298 source:c:\users\mrglaster\desktop\logicalelement (exam task)\sources\connectionsgraph\connectionsgraph.cpp
+	"../../headers/ConnectionsGraph/ConnectionsGraph.h"
+	<vector>
+	<list>
+
+1673286835 c:\users\mrglaster\desktop\logicalelement (exam task)\headers\connectionsgraph\connectionsgraph.h
+	<vector>
+
+1673320219 source:c:\users\mrglaster\desktop\logicalelement (exam task)\sources\demonstration\demonstration.cpp
+	<iostream>
+	"../../headers/LogicalElements/BufferElement.h"
+	"../../headers/LogicalElements/AndElement.h"
+	"../../headers/LogicalElements/OrElement.h"
+	"../../headers/LogicalElements/NotElement.h"
+	"../../headers/LogicalElements/NandElement.h"
+	"../../headers/LogicalScheme/LogicalScheme.h"
+	"../../headers/Demonstration/Demonstration.h"
+
+1673319106 c:\users\mrglaster\desktop\logicalelement (exam task)\headers\logicalelements\bufferelement.h
+	<vector>
+	"LogicalElement.h"
+
+1673323392 c:\users\mrglaster\desktop\logicalelement (exam task)\headers\logicalelements\andelement.h
+	"LogicalElement.h"
+	<vector>
+
+1673319255 c:\users\mrglaster\desktop\logicalelement (exam task)\headers\logicalelements\orelement.h
+	<vector>
+	"LogicalElement.h"
+
+1673319208 c:\users\mrglaster\desktop\logicalelement (exam task)\headers\logicalelements\notelement.h
+	<vector>
+	"LogicalElement.h"
+
+1673323085 c:\users\mrglaster\desktop\logicalelement (exam task)\headers\logicalelements\nandelement.h
+	<vector>
+	"LogicalElement.h"
+
+1673327780 source:c:\users\mrglaster\desktop\logicalelement (exam task)\sources\logicalelement\logicalelement.cpp
+	<vector>
+	<string>
+	<stdexcept>
+	<iostream>
+	"../../headers/LogicalElements/LogicalElement.h"
+
+1673327683 source:c:\users\mrglaster\desktop\logicalelement (exam task)\sources\logicalscheme\logicalscheme.cpp
+	<vector>
+	<iostream>
+	<fstream>
+	<sstream>
+	<string>
+	<map>
+	"../../headers/LogicalScheme/LogicalScheme.h"
+	"../../headers/LogicalElements/LogicalElement.h"
+	"../../headers/LogicalElements/AndElement.h"
+	"../../headers/LogicalElements/BufferElement.h"
+	"../../headers/LogicalElements/OrElement.h"
+	"../../headers/LogicalElements/NandElement.h"
+	"../../headers/LogicalElements/NorElement.h"
+	"../../headers/LogicalElements/NotElement.h"
+	"../../headers/LogicalElements/XnorElement.h"
+	"../../headers/LogicalElements/XorElement.h"
+	"../../headers/TablePrinter/TablePrinter.h"
+	"../../headers/ConnectionsGraph/ConnectionsGraph.h"
+	"../../headers/BinaryProcessor/BinaryProcessor.h"
+
+1673319216 c:\users\mrglaster\desktop\logicalelement (exam task)\headers\logicalelements\norelement.h
+	<vector>
+	"LogicalElement.h"
+
+1673319304 c:\users\mrglaster\desktop\logicalelement (exam task)\headers\logicalelements\xnorelement.h
+	"LogicalElement.h"
+	<vector>
+
+1673319344 c:\users\mrglaster\desktop\logicalelement (exam task)\headers\logicalelements\xorelement.h
+	<vector>
+	"LogicalElement.h"
+
+1673318921 source:c:\users\mrglaster\desktop\logicalelement (exam task)\sources\binaryprocessor\binaryprocessor.cpp
+	<vector>
+	<cmath>
+	"../../headers/BinaryProcessor/BinaryProcessor.h"
+
+1673318743 c:\users\mrglaster\desktop\logicalelement (exam task)\headers\binaryprocessor\binaryprocessor.h
+	<vector>
+
