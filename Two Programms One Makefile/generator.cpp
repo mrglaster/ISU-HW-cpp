@@ -5,7 +5,7 @@
 #include <fstream>
 #include <windows.h>
 
-#define M_PI 3.14
+#define M_PI 3.14159265358979323846
 
 /**Generates random radiam between -PI to PI*/
 double generateRadian(){
