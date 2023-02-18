@@ -1,0 +1,32 @@
+CC = g++
+CFLAGS = -std=c++11 -Wall 
+
+SOURCE_GENERATOR = generator.cpp
+SOURCE_PROCESSOR = angle_processor.cpp
+
+ifeq ($(OS), Windows_NT)
+	RM = del
+	TARGET_GENERATOR = generator.exe 
+	TARGET_PROCESSOR = angle_processor.exe
+else
+	RM = rm
+	TARGET_GENERATOR = generator
+	TARGET_PROCESSOR = angle_processor
+endif
+
+all: generator processor
+
+generator:
+	$(CC) $(CFLAGS) -o $(TARGET_GENERATOR) $(SOURCE_GENERATOR)
+
+processor:
+	$(CC) $(CFLAGS) -o $(TARGET_PROCESSOR) $(SOURCE_PROCESSOR)
+
+clean:
+	echo $(OS)
+	$(RM) $(TARGET_GENERATOR)
+	$(RM) $(TARGET_PROCESSOR)
+
+run: all
+	$(TARGET_GENERATOR) 42
+	
