@@ -28,6 +28,7 @@ void processFile(){
 		if (!(iss >> x >> separator >> y >> separator >> z)) { break; } // error
 		iss >> x >> separator >> y >> separator >> z;
 		std::cout<<currentPos<<") "<<getAngle(x, y, z)<<std::endl;
+		currentPos++;
 	}
 	std::cout<<std::endl;
 }
